@@ -21,8 +21,8 @@ jobs:
       uses: actions/setup-dotnet@v4
     - name: Execute build and run tests
       run: |
-        dotnet build --configuration ${{ matrix.configuration }} /nologo
-        dotnet test --configuration ${{ matrix.configuration }}
+        dotnet build --configuration "${{ matrix.configuration }}" /nologo
+        dotnet test --configuration "${{ matrix.configuration }}"
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
