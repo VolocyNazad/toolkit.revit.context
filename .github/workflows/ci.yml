@@ -29,7 +29,6 @@ jobs:
         name: VolocyNazad.Revit.Context
         path: artifacts/*
     - name: Publish NuGet package
-      if: startsWith(github.ref, 'refs/tags/v')
       run: |
         foreach($file in (Get-ChildItem "artifacts/" -Recurse -Include *.nupkg)) {
             dotnet nuget push $file --api-key "${{ secrets.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
