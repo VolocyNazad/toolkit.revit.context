@@ -6,7 +6,6 @@
 		<LangVersion>latest</LangVersion>
 		<AnalysisMode>AllEnabledByDefault</AnalysisMode>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-		<NoWarn>$(NoWarn);CS1591</NoWarn>
+		<Platforms>x64</Platforms>
     </PropertyGroup>
 </Project>

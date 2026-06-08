@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Revit.Context": {
+      "commandName": "Project",
+      "commandLineArgs": ""
+    }
+  }
+}
