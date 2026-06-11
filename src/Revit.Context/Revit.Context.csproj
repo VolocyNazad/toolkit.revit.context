@@ -20,6 +20,8 @@
 		<RepositoryUrl>https://github.com/VolocyNazad/toolkit.revit.context</RepositoryUrl>
 		<PackageReleaseNotes>https://github.com/VolocyNazad/toolkit.revit.context/blob/main/CHANGELOG.md</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<!--<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>-->
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -160,7 +162,7 @@
 	</Target>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.8" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.9" />
 		<PackageReference Include="PolySharp" Version="1.16.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
