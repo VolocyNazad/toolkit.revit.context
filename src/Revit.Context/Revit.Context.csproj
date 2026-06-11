@@ -49,9 +49,9 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<AssemblyVersion>$(MajorRevitVersion).0.5</AssemblyVersion>
-		<FileVersion>$(MajorRevitVersion).0.5</FileVersion>
-		<Version>$(MajorRevitVersion).0.5</Version>
+		<AssemblyVersion>$(MajorRevitVersion).0.6</AssemblyVersion>
+		<FileVersion>$(MajorRevitVersion).0.6</FileVersion>
+		<Version>$(MajorRevitVersion).0.6</Version>
 	</PropertyGroup>
 
 	<PropertyGroup>
