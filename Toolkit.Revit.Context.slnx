@@ -39,7 +39,7 @@
     <BuildType Name="Release_2026.0.0" />
     <Platform Name="x64" />
   </Configurations>
-  <Folder Name="/Solution Items/">
+  <Folder Name="/solutionItems/">
     <File Path=".gitattributes" />
     <File Path=".gitignore" />
     <File Path="CHANGELOG.md" />
@@ -48,6 +48,11 @@
     <File Path="global.json" />
     <File Path="LICENSE.md" />
     <File Path="README.md" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Revit.Context.Tests/Revit.Context.Tests.csproj">
+      <Platform Project="x64" />
+    </Project>
   </Folder>
   <Project Path="src/Revit.Context/Revit.Context.csproj">
     <Platform Project="x64" />
