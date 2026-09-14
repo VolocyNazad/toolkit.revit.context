@@ -1,29 +1,29 @@
 # Revit.Context
 
-[![Revit 2021-2027](https://img.shields.io/badge/Revit-2021–2027-green.svg)](https://autodesk.com/revit)
+[![Revit 2021.1.9, 2023, 2025](https://img.shields.io/badge/Revit-2021.1.9%20%7C%202023%20%7C%202025-green.svg)](https://autodesk.com/revit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![VolocyNazad](https://img.shields.io/badge/VolocyNazad-blue.svg)](https://github.com/VolocyNazad)
 
-> Реализация паттерна Context Object для удобного доступа к объектам контекста Revit API.
+> An implementation of the Context Object pattern for convenient access to Revit API context objects.
 
-Revit.Context — это набор сервисов доступа к контексту Revit API с поддержкой DI-контейнеризации.
+Revit.Context is a set of services for accessing the Revit API context with support for DI containerization.
 
-## Возможности
+## Features
 
-- `IRevitContext` — интерфейс для доступа к объектам контекста Revit API: `UIControlledApplication`, `ControlledApplication`, `Application`, `UIApplication`, `ActiveUIDocument`, `ActiveDocument`.
-- `IRevitContextInitializer` — интерфейс инициализации контекста на этапе запуска надстройки (`OnStartup`).
-- `RevitContext` — единственная реализация обоих интерфейсов; отслеживает событие `ApplicationInitialized`, чтобы `Application` и производные от него свойства (`UIApplication`, `ActiveUIDocument`, `ActiveDocument`) стали доступны сразу после запуска Revit, а не только после открытия документа.
-- Регистрация в DI одной строкой через `AddRevitContext()`.
+- `IRevitContext` — an interface for accessing Revit API context objects: `UIControlledApplication`, `ControlledApplication`, `Application`, `UIApplication`, `ActiveUIDocument`, `ActiveDocument`.
+- `IRevitContextInitializer` — an interface for initializing the context during add-in startup (`OnStartup`).
+- `RevitContext` — the single implementation of both interfaces; it tracks the `ApplicationInitialized` event so that `Application` and its derived properties (`UIApplication`, `ActiveUIDocument`, `ActiveDocument`) become available right after Revit starts, not only after a document is opened.
+- One-line DI registration via `AddRevitContext()`.
 
-## Установка
+## Installation
 
 ```
 dotnet add package VolocyNazad.Revit.Context
 ```
 
-## Использование
+## Usage
 
-Регистрация сервисов в контейнере DI:
+Registering services in the DI container:
 
 ```csharp
 using Microsoft.Extensions.DependencyInjection;
@@ -32,7 +32,7 @@ using Revit.Context.DI;
 services.AddRevitContext();
 ```
 
-Инициализация в `IExternalApplication.OnStartup`:
+Initialization in `IExternalApplication.OnStartup`:
 
 ```csharp
 using Autodesk.Revit.UI;
@@ -47,7 +47,7 @@ public Result OnStartup(UIControlledApplication application)
 }
 ```
 
-Использование контекста в любом сервисе:
+Using the context in any service:
 
 ```csharp
 using Revit.Context.Abstractions.Services;
@@ -63,15 +63,24 @@ public sealed class MyService(IRevitContext context)
 }
 ```
 
-## Поддерживаемые версии Revit
+## Supported Revit versions
 
-Пакет собирается под версии Revit 2021–2027 (см. конфигурации в `Revit.Context.csproj`), таргетируя `net48` для версий до 2025 и `net8.0-windows` для 2025+.
+The package is built and tested for Revit 2021.1.9, 2023.0.0, and 2025.0.0. Revit 2021 and 2023 target net48; Revit 2025 targets net8.0-windows.
 
-## Требования
+## Requirements
 
-- .NET SDK 10.0.103+ (см. `global.json`)
-- Revit API (пакет `Revit_All_Main_Versions_API_x64`)
+- .NET SDK 10.0.103+ (see `global.json`)
+- Revit API (package `Revit_All_Main_Versions_API_x64`)
 
-## Лицензия
+## License
 
-MIT, см. [LICENSE.md](LICENSE.md).
+MIT, see [LICENSE.md](LICENSE.md).
+
+## Development documentation
+
+- [Development policy](docs/policies/development.md)
+- [Repository guide and technology stack](docs/repository.md)
+
+## Contributing
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting changes.
