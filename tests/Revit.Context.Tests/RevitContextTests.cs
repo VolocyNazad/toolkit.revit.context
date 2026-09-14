@@ -4,6 +4,7 @@ using Xunit;
 
 namespace Revit.Context.Tests;
 
+[System.Diagnostics.CodeAnalysis.SuppressMessage("Naming", "CA1707:Identifiers should not contain underscores", Justification = "Test names use underscores to separate scenario and expected result.")]
 public class RevitContextTests
 {
     [Fact]
@@ -15,8 +16,8 @@ public class RevitContextTests
         Assert.IsAssignableFrom<IRevitContextInitializer>(context);
     }
 
-    [Fact(Skip = "Требует установленного Revit: чтение Revit-типизированных свойств (UIControlledApplication и т.д.) " +
-                 "заставляет CLR грузить RevitAPI/RevitAPIUI, а они не запускаются вне процесса/установки Revit.")]
+    [Fact(Skip = "Requires Revit to be installed: reading Revit-typed properties (UIControlledApplication, etc.) " +
+                 "forces the CLR to load RevitAPI/RevitAPIUI, which will not run outside a Revit process/installation.")]
     public void NewInstance_HasNoContextUntilInitialized()
     {
         var context = new RevitContext();
@@ -29,8 +30,8 @@ public class RevitContextTests
         Assert.Null(context.ActiveDocument);
     }
 
-    [Fact(Skip = "Требует установленного Revit: чтение Revit-типизированных свойств (UIApplication и т.д.) " +
-                 "заставляет CLR грузить RevitAPI/RevitAPIUI, а они не запускаются вне процесса/установки Revit.")]
+    [Fact(Skip = "Requires Revit to be installed: reading Revit-typed properties (UIApplication, etc.) " +
+                 "forces the CLR to load RevitAPI/RevitAPIUI, which will not run outside a Revit process/installation.")]
     public void UIApplication_IsNull_WhenApplicationHasNotBeenInitializedYet()
     {
         var context = new RevitContext();

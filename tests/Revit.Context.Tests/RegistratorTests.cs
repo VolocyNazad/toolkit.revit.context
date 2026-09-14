@@ -6,6 +6,7 @@ using Xunit;
 
 namespace Revit.Context.Tests;
 
+[System.Diagnostics.CodeAnalysis.SuppressMessage("Naming", "CA1707:Identifiers should not contain underscores", Justification = "Test names use underscores to separate scenario and expected result.")]
 public class RegistratorTests
 {
     [Fact]
