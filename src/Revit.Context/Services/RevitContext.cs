@@ -16,6 +16,8 @@ public sealed class RevitContext : IRevitContextInitializer, IRevitContext
     /// <inheritdoc />
     public void Initialize(UIControlledApplication uIControlledApplication)
     {
+        Guard.ThrowIfNull(uIControlledApplication, nameof(uIControlledApplication));
+
         UIControlledApplication = uIControlledApplication;
         uIControlledApplication.ControlledApplication.ApplicationInitialized += ControlledApplication_ApplicationInitialized;
     }
