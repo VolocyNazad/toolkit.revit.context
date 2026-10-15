@@ -6,6 +6,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.0.10] - 2026-10-15
+
 ### Added
 
 - Support Revit 2021-2027: 2021.1.9, 2022.1.0, 2023.0.0, 2024.2.0, 2025.0.0, 2026.0.0, 2027.2.0 (SDK 1.1.0; 2021-2024 net48, 2025-2026 net8.0-windows, 2027 net10.0-windows).
