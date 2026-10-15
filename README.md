@@ -65,7 +65,7 @@ public sealed class MyService(IRevitContext context)
 
 ## Supported Revit versions
 
-The package is built and tested for Revit 2021.1.9, 2022.1.0, 2023.0.0, 2024.2.0, 2025.0.0, 2026.4.10, and 2027.2.0. Revit 2021-2024 target net48; Revit 2025-2026 target net8.0-windows; Revit 2027 targets net10.0-windows.
+The package is built and tested for Revit 2021.1.100, 2022.1.80, 2023.1.90, 2024.3.60, 2025.4.60, 2026.4.10, and 2027.3.0. Revit 2021-2024 target net48; Revit 2025-2026 target net8.0-windows; Revit 2027 targets net10.0-windows.
 
 ## Requirements
 
