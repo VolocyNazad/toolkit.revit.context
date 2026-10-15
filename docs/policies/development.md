@@ -47,4 +47,4 @@ Projects using xUnit v3 4.0 run through Microsoft.Testing.Platform, selected in 
 
 ## Supported Revit versions
 
-This repository supports Revit 2021.1.9, 2022.1.0, 2023.0.0, 2024.2.0, 2025.0.0, 2026.0.0, and 2027.2.0. Keep project configurations, tests, CI, documentation, and produced packages limited to this matrix. The shared SDK maintains its own broader compatibility range.
+This repository supports Revit 2021.1.9, 2022.1.0, 2023.0.0, 2024.2.0, 2025.0.0, 2026.4.10, and 2027.2.0. Keep project configurations, tests, CI, documentation, and produced packages limited to this matrix. The shared SDK maintains its own broader compatibility range.

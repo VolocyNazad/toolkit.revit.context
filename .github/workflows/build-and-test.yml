@@ -14,7 +14,7 @@ jobs:
       matrix:
         configuration: [
           "Release_2021.1.9", "Release_2022.1.0", "Release_2023.0.0", "Release_2024.2.0",
-          "Release_2025.0.0", "Release_2026.0.0", "Release_2027.2.0"
+          "Release_2025.0.0", "Release_2026.4.10", "Release_2027.2.0"
         ]
 
     steps:
