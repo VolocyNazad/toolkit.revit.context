@@ -1,4 +1,4 @@
-﻿<Project Sdk="VolocyNazad.Revit.Sdk/1.0.44">
+﻿<Project Sdk="VolocyNazad.Revit.Sdk/1.1.0">
 	<PropertyGroup>
 		<Platform>x64</Platform>
 		<OutputType>Exe</OutputType>
@@ -9,8 +9,8 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<Configurations>
-		  Debug_2021.1.9;Debug_2023.0.0;Debug_2025.0.0;
-		  Release_2021.1.9;Release_2023.0.0;Release_2025.0.0
+		  Debug_2021.1.9;Debug_2022.1.0;Debug_2023.0.0;Debug_2024.2.0;Debug_2025.0.0;Debug_2026.0.0;Debug_2027.2.0;
+		  Release_2021.1.9;Release_2022.1.0;Release_2023.0.0;Release_2024.2.0;Release_2025.0.0;Release_2026.0.0;Release_2027.2.0
 		</Configurations>
 	</PropertyGroup>
 	<ItemGroup>
